@@ -3,11 +3,21 @@ include!("ref.rs");
 use std::process::Command;
 
 fn main() {
-    let result = Command::new("sh")
-        .arg("-c")
-        .arg("ls && uname -a")
+
+    // for UNIX only
+    // let mut result = Command::new("sh")
+    //     .arg("-c")
+    //     .arg("ls && uname -a")
+    //     .output()
+    //     .expect("msg");
+
+    // for windows only
+    let mut result = Command::new("cmd")
+        .args(["/C", "echo hello"])
         .output()
         .expect("msg");
+
+
     let result_utf8 = String::from_utf8(result.stdout).expect("msg");
     println!("{result_utf8}");
 
