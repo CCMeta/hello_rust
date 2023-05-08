@@ -12,7 +12,7 @@ fn main() {
     //     .expect("msg");
 
     // for windows only
-    let mut result = Command::new("cmd")
+    let result = Command::new("cmd")
         .args(["/C", "echo hello"])
         .output()
         .expect("msg");

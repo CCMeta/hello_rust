@@ -1,5 +1,5 @@
 [package]
-name = "hello"
+name = "hello_rust"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,9 +7,13 @@ edition = "2021"
 
 [dependencies]
 
+[build-dependencies]
+pkg-config = "0.3.27"
+bindgen = "0.65.1"
+
 [profile.release]
 opt-level = 'z'     # Optimize for size.
-lto = true          # Enable Link Time Optimization
+#lto = true          # Enable Link Time Optimization
 codegen-units = 1   # Reduce number of codegen units to increase optimizations.
 panic = 'abort'     # Abort on panic
 strip = true        # Strip symbols from binary*

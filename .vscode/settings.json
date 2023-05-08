@@ -1,0 +1,5 @@
+{
+  "rust-analyzer.linkedProjects": [
+    ".\\openwrt_hello_rust\\Cargo.toml"
+  ]
+}
