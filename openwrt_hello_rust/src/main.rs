@@ -15,7 +15,7 @@ fn main() {
     let shit = c_say_hello();
     println!("{0}", shit);
 
-    return;
+    // return;
     let args_arr = args().skip(1);
     let output = Command::new("sh")
         .arg("-c")

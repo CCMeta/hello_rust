@@ -1,5 +1,6 @@
 fn main() {
     println!("cargo:rustc-link-search=./"); //指定库
+    // println!("cargo:rustc-link-lib=hello"); //指定库
     println!("cargo:rustc-link-lib=static=hello"); //指定库
     // println!("cargo:rerun-if-changed=lib/hello.h");
     // need to copy libhello.so to /lib 
