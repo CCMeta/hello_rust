@@ -4,6 +4,9 @@
 please make sure your ~/.cargo/config.toml settings the right linker
 [target.aarch64-unknown-linux-musl]
 linker = "lld"
+[target.aarch64-unknown-linux-gnu]
+linker = "aarch64-none-linux-gnu-gcc"
+rustflags = ["-C", "target-feature=+crt-static"]
 ```
 
 ```text
