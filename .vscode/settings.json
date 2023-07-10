@@ -1,5 +1,6 @@
 {
   "rust-analyzer.linkedProjects": [
-    ".\\openwrt_hello_rust\\Cargo.toml"
+    ".\\openwrt_hello_rust\\Cargo.toml",
+    ".\\Cargo.toml",
   ]
 }
