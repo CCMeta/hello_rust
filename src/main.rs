@@ -1,9 +1,9 @@
 // include!("dbg.rs");
 include!("ref.rs");
 use std::process::Command;
+use futures::executor::block_on;
 
 fn main() {
-
     // for UNIX only
     // let mut result = Command::new("sh")
     //     .arg("-c")
@@ -16,7 +16,6 @@ fn main() {
         .args(["/C", "echo hello"])
         .output()
         .expect("msg");
-
 
     let result_utf8 = String::from_utf8(result.stdout).expect("msg");
     println!("{result_utf8}");
@@ -43,9 +42,26 @@ fn main() {
     for lan in lans.iter() {
         println!("{}", lan);
     }
-    println!("{}", fuck(cn.to_string()))
+    let future = fuck(cn.to_string());
+    println!("{}", future);
 }
 
 fn fuck(text: String) -> String {
+    let mut x = String::from("junmajinlong");
+    let x_mut1 = &x;
+    println!("{}", block_on(name(x_mut1)));
+    println!("{}", x_mut1);
+    println!("{}", x_mut1);
+    println!("{}", x_mut1);
+    println!("{}", x_mut1);
+    println!("{}", x_mut1);
+    let x_mut2 = &mut x;
+    let x_mut3 = &mut x;
+    println!("{}", x_mut3);
+
     text
+}
+
+async fn name(x: &String) -> String {
+    x.to_string()
 }
