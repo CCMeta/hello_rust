@@ -5,17 +5,17 @@ use futures::executor::block_on;
 
 fn main() {
     // for UNIX only
-    // let mut result = Command::new("sh")
-    //     .arg("-c")
-    //     .arg("ls && uname -a")
-    //     .output()
-    //     .expect("msg");
-
-    // for windows only
-    let result = Command::new("cmd")
-        .args(["/C", "echo hello"])
+    let result = Command::new("sh")
+        .arg("-c")
+        .arg("ls && uname -a")
         .output()
         .expect("msg");
+
+    // for windows only
+    // let result = Command::new("cmd")
+    //     .args(["/C", "echo hello"])
+    //     .output()
+    //     .expect("msg");
 
     let result_utf8 = String::from_utf8(result.stdout).expect("msg");
     println!("{result_utf8}");
