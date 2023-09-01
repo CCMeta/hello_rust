@@ -48,6 +48,7 @@
             <p><a href="https://doc.rust-lang.org/reference/index.html">https://doc.rust-lang.org/reference/index.html</a>
             </p>
             <h3>中文版</h3>
+            <p><a href="https://minstrel1977.gitee.io/rust-reference/">https://minstrel1977.gitee.io/rust-reference/</a></p>
             <p><a href="https://www.rustwiki.org.cn/zh-CN/reference">https://www.rustwiki.org.cn/zh-CN/reference</a></p>
             <h2>API 参考文档</h2>
             <h3>英文版</h3>
