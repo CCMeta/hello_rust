@@ -8,6 +8,7 @@
           <span class="text-secondary" style="margin-left: .5rem!important;">大约 1888 字</span>
           <!--            <hr>-->
           <div>
+            <h2>Rust，Mozilla开发的注重安全、性能和并发性的编程语言 https://www.bookstack.cn/explore?tab=latest&cid=30&lang=</h2>
             <h2>Rust 程序设计语言</h2>
             <h2>Rust 语言之旅 https://tourofrust.com/00_zh-cn.html</h2>
             <h2>rCore-Tutorial-Book 第三版 http://rcore-os.cn/rCore-Tutorial-Book-v3/index.html</h2>
