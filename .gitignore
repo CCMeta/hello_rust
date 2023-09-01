@@ -1,4 +1,4 @@
 /target
 openwrt_hello_rust/target
-openwrt_hello_rust/.idea
 /.vscode
+openwrt_hello_rust/.idea/modules.xml

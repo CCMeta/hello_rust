@@ -1,0 +1,43 @@
+aon_ram_addr=0xffffef8000
+arch=riscv
+audio_ram_addr=0xffc0000000
+baudrate=115200
+board=light-c910
+board_name=light-c910
+boot_conf_addr_r=0xc0000000
+boot_conf_file=/extlinux/extlinux.conf
+
+bootcmd=run bootcmd_load; bootslave; sysboot mmc ${mmcdev}:${mmcbootpart} any $boot_conf_addr_r $boot_conf_file;
+
+bootcmd_load=run findpart;run load_aon;run load_c906_audio; ext4load mmc ${mmcdev}:${mmcbootpart} $opensbi_addr fw_dynamic.bin
+
+load_aon=ext4load mmc ${mmcdev}:${mmcbootpart} $fwaddr light_aon_fpga.bin;cp.b $fwaddr $aon_ram_addr $filesize
+
+load_c906_audio=ext4load mmc ${mmcdev}:${mmcbootpart} $fwaddr light_c906_audio.bin;cp.b $fwaddr $audio_ram_addr $filesize
+
+
+bootdelay=2
+cpu=c9xx
+eth1addr=c6:e5:b3:f1:e0:a5
+ethaddr=c6:e5:b3:f1:e0:a4
+fdt_addr_r=0x02400000
+fdt_high=0xffffffffffffffff
+fdtcontroladdr=ffba7700
+fdtfile=thead/light-lpi4a.dtb
+finduuid=part uuid mmc ${mmcdev}:${mmcpart} uuid
+fwaddr=0x10000000
+gpt_partition=gpt write mmc ${mmcdev} $partitions
+kdump_buf=180M
+kernel_addr_r=0x00200000
+
+mmcbootpart=2
+mmcdev=0
+opensbi_addr=0x0
+partitions=name=table,size=2031KB;name=boot,size=500MiB,type=boot;name=root,size=-,type=linux,uuid=${uuid_rootfsA}
+pxefile_addr_r=0x00600000
+ramdisk_addr_r=0x06000000
+scriptaddr=0x00500000
+splashimage=0x30000000
+splashpos=m,m
+uuid_rootfsA=80a5a8e9-c744-491a-93c1-4f4194fd690a
+vendor=thead

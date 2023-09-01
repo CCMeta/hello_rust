@@ -1,0 +1,36 @@
+C910 Light# printenv
+aon_ram_addr=0xffffef8000
+arch=riscv
+audio_ram_addr=0xffc0000000
+baudrate=115200
+board=light-c910
+board_name=light-c910
+bootcmd=run bootcmd_load; bootslave; run finduuid; run set_bootargs; bootm $kernel_addr $ramdisk_addr:$ramdisk_size $dtb_addr;
+bootcmd_load=run load_aon;run load_c906_audio;ext4load mmc 0:2 $opensbi_addr fw_dynamic.bin;bootandroid
+bootdelay=2
+cpu=c9xx
+dtb_addr=0x01f00000
+eth1addr=ea:48:10:a9:04:82
+ethaddr=ea:48:10:a9:04:81
+fdt_file=light-val.dtb
+fdt_high=0xffffffffffffffff
+fdtcontroladdr=ffba74a0
+finduuid=part uuid mmc ${mmcdev}:${mmcpart} uuid
+fwaddr=0x10000000
+gpt_partition=gpt write mmc ${mmcdev} $partitions
+kernel_addr=0x00200000
+load_aon=ext4load mmc 0:2 $fwaddr light_aon_fpga.bin;cp.b $fwaddr $aon_ram_addr $filesize
+load_c906_audio=ext4load mmc 0:2 $fwaddr light_c906_audio.bin;cp.b $fwaddr $audio_ram_addr $filesize
+mmcdev=0
+mmcpart=3
+opensbi_addr=0x0
+partitions=name=sparse,size=2031kb;name=bootpart,size=8MiB;name=boot_a,size=32MiB;name=boot_b,size=32MiB;name=vendor_boot_a,size=32MiB;name=vendor_boot_b,size=32MiB;name=dtbo,size=8MiB;name=super,size=4096MiB;name=vbmeta_a,size=1MiB;name=vbmeta_b,size=1MiB;name=vbmeta_system_a,size=1MiB;name=vbmeta_system_b,size=1MiB;name=misc,size=2MiB;name=metadata,size=16MiB;name=userdata,size=-
+ramdisk_addr=0x02000000
+serial#=1234567890
+set_bootargs=setenv bootargs console=ttyS0,115200 earlycon clk_ignore_unused loop.max_part=7 loglevel=7 init=/init bootconfig video=HDMI-A-1:800x600-32@60 firmware_class.path=/vendor/firmware
+splashimage=0x30000000
+splashpos=m,m
+uuid_rootfs=80a5a8e9-c744-491a-93c1-4f4194fd690b
+vendor=thead
+
+Environment size: 1607/131068 bytes
