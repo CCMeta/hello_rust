@@ -9,11 +9,12 @@
           <!--            <hr>-->
           <div>
             <h2>Rust，Mozilla开发的注重安全、性能和并发性的编程语言 https://www.bookstack.cn/explore?tab=latest&cid=30&lang=</h2>
-            <h2>Rust 程序设计语言</h2>
+            <h2>[rust-lang.org](https://www.rust-lang.org/zh-CN/learn)</h2>
             <h2>Rust 语言之旅 https://tourofrust.com/00_zh-cn.html</h2>
             <h2>rCore-Tutorial-Book 第三版 http://rcore-os.cn/rCore-Tutorial-Book-v3/index.html</h2>
             <h2>rCore-OS 开源操作系统社区 http://rcore-os.cn/</h2>
             <h2>LearnRustEasy(https://rustycab.github.io/LearnRustEasy/chapter_3/chapter_3_7_2.html)</h2>
+            <h2>Rust 程序设计语言</h2>
             <h3>英文版</h3>
             <p><a href="https://doc.rust-lang.org/book">https://doc.rust-lang.org/book</a></p>
             <h3>中文版</h3>
