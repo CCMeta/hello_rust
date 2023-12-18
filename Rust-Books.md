@@ -8,6 +8,7 @@
           <span class="text-secondary" style="margin-left: .5rem!important;">大约 1888 字</span>
           <!--            <hr>-->
           <div>
+            <h2>Rust Design Patterns https://fomalhauthmj.github.io/patterns/</h2>
             <h2>Rust，Mozilla开发的注重安全、性能和并发性的编程语言 https://www.bookstack.cn/explore?tab=latest&cid=30&lang=</h2>
             <h2>[rust-lang.org](https://www.rust-lang.org/zh-CN/learn)</h2>
             <h2>Rust 语言之旅 https://tourofrust.com/00_zh-cn.html</h2>
